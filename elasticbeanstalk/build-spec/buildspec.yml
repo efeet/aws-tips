@@ -1,0 +1,17 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12
+  pre_build:
+    commands:
+      - npm install -g @quasar/cli
+  build:
+    commands:
+      - npm i
+      - quasar build -m pwa
+      - tar -cvf front.tar -C dist/pwa/ .
+artifacts:
+  files:
+    - front.tar
+    - .ebextensions/**/*
