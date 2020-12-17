@@ -1,3 +1,4 @@
+#Este buildspec.yml se utiliza para compilar VUE y llevarse el FRONT.
 version: 0.2
 phases:
   install:
